@@ -1,0 +1,5 @@
+ID_Estoque;ID_Produto;Quantidade;Quantidade Mínima;Localização
+1;1;50;10;Prateleira 1
+2;2;30;5;Prateleira 2
+3;3;15;3;Prateleira 1
+4;4;8;2;Prateleira 1

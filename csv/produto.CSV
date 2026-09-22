@@ -1,0 +1,5 @@
+ID;Nome ;Descrição;Preço;Marca;ID_Categoria;ID_Fornecedor
+1;Camiseta de algodão;Camiseta 100% de algodão preta; R$ 70,00 ;Nike;1;1
+2;Calça jeans;Calça jeans azul escuro modelagem slim; R$ 150,00 ;Fofinha;2;1
+3;Meia;Meia tamanho 40 branca; R$ 40,00 ;Puma;3;2
+4;Moletom sem touca;Moletom azul sem touca ; R$ 200,00 ;Adidas;4;2
