@@ -4,6 +4,37 @@
 ![MER DER Conceitual](./MER%20DER%20Conceitual.drawio.png)
 ![MER DER Lógico](./MER%20DER%20Lógico.drawio.png)
 
+## Dicionário de Dados
+
+| Entidade             | Atributo          | Tipo         | Tamanho | Descrição                                                     |
+| :------------------- | :---------------- | :----------- | :------ | :------------------------------------------------------------ |
+| **Categoria**        | id                | Inteiro      | 11      | Identificador, PK, Auto incrementável                         |
+| **Categoria**        | nome              | Texto        | 100     | Nome da categoria do produto                                  |
+| **Categoria**        | descricao         | Texto        | Text    | Descrição detalhada da categoria                              |
+| **Fornecedor**       | id                | Inteiro      | 11      | Identificador, PK, Auto incrementável                         |
+| **Fornecedor**       | razao_social      | Texto        | 150     | Razão social da empresa fornecedora                           |
+| **Fornecedor**       | nome_fantasia     | Texto        | 150     | Nome fantasia do fornecedor                                   |
+| **Fornecedor**       | cnpj              | Texto        | 18      | Número do CNPJ (único)                                        |
+| **Fornecedor**       | telefone          | Texto        | 20      | Telefone de contato do fornecedor                             |
+| **Fornecedor**       | email             | Texto        | 100     | E-mail de contato do fornecedor                               |
+| **Fornecedor**       | endereco          | Texto        | 255     | Endereço completo do fornecedor                               |
+| **Produto**          | id                | Inteiro      | 11      | Identificador, PK, Auto incrementável                         |
+| **Produto**          | nome              | Texto        | 100     | Nome da peça de roupa                                         |
+| **Produto**          | descricao         | Texto        | Text    | Descrição detalhada do produto                                |
+| **Produto**          | preco             | Decimal      | 10,2    | Preço unitário de venda do produto                            |
+| **Produto**          | marca             | Texto        | 50      | Marca do produto                                              |
+| **Produto**          | id_categoria      | Inteiro      | 11      | Identificador da categoria, FK referenciando Categoria (id)   |
+| **Produto**          | id_fornecedor     | Inteiro      | 11      | Identificador do fornecedor, FK referenciando Fornecedor (id) |
+| **Estoque**          | id_estoque        | Inteiro      | 11      | Identificador, PK, Auto incrementável                         |
+| **Estoque**          | id_produto        | Inteiro      | 11      | Identificador do produto, FK referenciando Produto (id)       |
+| **Estoque**          | quantidade        | Inteiro      | 11      | Quantidade atual disponível em estoque                        |
+| **Estoque**          | quantidade_minima | Inteiro      | 11      | Quantidade mínima de segurança em estoque                     |
+| **Estoque**          | localizacao       | Texto        | 100     | Localização física do item (ex: Prateleira A1)                |
+| **Movimentacao_Estoque** | id_movimentacao | Inteiro   | 11      | Identificador, PK, Auto incrementável                         |
+| **Movimentacao_Estoque** | id_produto      | Inteiro      | 11      | Identificador do produto, FK referenciando Produto (id)       |
+| **Movimentacao_Estoque** | tipo            | Texto (Enum) | 10      | Tipo da movimentação ('Entrada' ou 'Saída')                   |
+| **Movimentacao_Estoque** | quantidade      | Inteiro      | 11      | Quantidade movimentada                                        |
+| **Movimentacao_Estoque** | data            | Data/Hora    | Datetime| Data e hora do registro da movimentação                       |
 
 ## Dados de teste em CSV
 - [categoria.csv](./csv/categoria.CSV)
